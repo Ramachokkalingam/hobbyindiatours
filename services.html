@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hobby India Tours Services - International Tours, Domestic Tours, Visa Services, Forex, Flight Booking, Corporate Travel, Educational Trips.">
+    <title>Our Services - Hobby India Tours</title>
+    <link rel="icon" type="image/png" href="assets/images/logo/fevicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo/fevicon.png">
+    <link rel="apple-touch-icon" href="assets/images/logo/fevicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(59, 130, 246, 0.8) 100%), url('assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.38.jpeg') center/cover;
+            padding: 100px 0 60px;
+            text-align: center;
+            color: var(--white);
+        }
+        .page-hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .page-hero p {
+            font-size: 20px;
+        }
+        .services-intro {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+        .services-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        .service-detail {
+            padding: 60px 0;
+        }
+        .service-detail:nth-child(even) {
+            background: var(--light-color);
+        }
+        .service-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .service-detail:nth-child(even) .service-content {
+            direction: rtl;
+        }
+        .service-detail:nth-child(even) .service-content > * {
+            direction: ltr;
+        }
+        .service-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            height: 400px;
+        }
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .service-info h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        .service-info p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        .service-features li {
+            padding: 12px 0;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .service-features li i {
+            color: var(--success-color);
+            font-size: 18px;
+        }
+        .categories-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .category-card {
+            background: var(--light-color);
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+        .category-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            color: var(--white);
+        }
+        .category-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        .category-card p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .service-content {
+                grid-template-columns: 1fr;
+            }
+            .service-detail:nth-child(even) .service-content {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919952211211?text=Hi%2C%20I%27m%20interested%20in%20your%20tour%20packages" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +91-9952211211</span>
+                        <span><i class="fas fa-envelope"></i> hobbyindiatours@gmail.com</span>
+                        <span class="hide-mobile"><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:00 PM</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" title="Coming Soon - Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Coming Soon - Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919952211211" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/hobby india logo.png" alt="Hobby India Tours Logo">
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tour Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html" class="active">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html" class="btn-primary">Get Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Complete travel solutions for every journey</p>
+        </div>
+    </section>
+
+    <!-- Services Intro -->
+    <section class="services-intro">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive Travel Solutions</h2>
+                <p>At Hobby India Tours, we provide end-to-end travel services designed to make your journey seamless, comfortable, and memorable. From planning to execution, we handle every detail so you can focus on creating unforgettable memories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Tours -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.16 (2).jpeg" alt="International Tours">
+                </div>
+                <div class="service-info">
+                    <h2><i class="fas fa-globe-americas"></i> International Tours</h2>
+                    <p>Explore the world with our carefully curated international tour packages. We specialize in creating memorable journeys to exotic destinations across Asia, Middle East, and beyond.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Customized itineraries based on your preferences</li>
+                        <li><i class="fas fa-check-circle"></i> Hand-picked hotels and accommodations</li>
+                        <li><i class="fas fa-check-circle"></i> Professional tour guides and local experts</li>
+                        <li><i class="fas fa-check-circle"></i> Airport transfers and local transportation</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 support during your entire trip</li>
+                        <li><i class="fas fa-check-circle"></i> Visa assistance and documentation support</li>
+                    </ul>
+                    <a href="tours.html" class="btn btn-primary">View International Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domestic Tours -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.37 (2).jpeg" alt="Domestic Tours">
+                </div>
+                <div class="service-info">
+                    <h2><i class="fas fa-map-marked-alt"></i> Domestic Tours</h2>
+                    <p>Discover the incredible beauty and diversity of India with our domestic tour packages. From beaches to mountains, heritage sites to modern cities - we cover it all.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Beach destinations (Goa, Kerala, Andaman)</li>
+                        <li><i class="fas fa-check-circle"></i> Hill stations and mountain retreats</li>
+                        <li><i class="fas fa-check-circle"></i> Heritage and cultural tours</li>
+                        <li><i class="fas fa-check-circle"></i> Pilgrimage tours</li>
+                        <li><i class="fas fa-check-circle"></i> Wildlife and nature expeditions</li>
+                        <li><i class="fas fa-check-circle"></i> Metropolitan city breaks</li>
+                    </ul>
+                    <a href="tours.html" class="btn btn-primary">View Domestic Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visa Services -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.32 (1).jpeg" alt="Visa Services">
+                </div>
+                <div class="service-info">
+                    <h2><i class="fas fa-passport"></i> Visa Services</h2>
+                    <p>Navigating visa requirements can be complex. Our expert team provides complete visa assistance to ensure a smooth and hassle-free application process.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Tourist visa processing for all countries</li>
+                        <li><i class="fas fa-check-circle"></i> Document verification and preparation</li>
+                        <li><i class="fas fa-check-circle"></i> Application form filling assistance</li>
+                        <li><i class="fas fa-check-circle"></i> Appointment scheduling support</li>
+                        <li><i class="fas fa-check-circle"></i> Visa tracking and follow-up</li>
+                        <li><i class="fas fa-check-circle"></i> Expert guidance on requirements</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Inquire About Visa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flight Booking -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.44.jpeg" alt="Flight Booking">
+                </div>
+                <div class="service-info">
+                    <h2><i class="fas fa-plane-departure"></i> Flight Booking Services</h2>
+                    <p>Get the best deals on domestic and international flights. We have partnerships with major airlines to offer you competitive prices and convenient schedules.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Domestic and international flight tickets</li>
+                        <li><i class="fas fa-check-circle"></i> Competitive prices with best deals</li>
+                        <li><i class="fas fa-check-circle"></i> Preferred seat selection</li>
+                        <li><i class="fas fa-check-circle"></i> Flight change and cancellation assistance</li>
+                        <li><i class="fas fa-check-circle"></i> Group booking discounts</li>
+                        <li><i class="fas fa-check-circle"></i> Travel insurance options</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Book Flights Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forex Services -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.33 (1).jpeg" alt="Forex Services">
+                </div>
+                <div class="service-info">
+                    <h2><i class="fas fa-money-bill-wave"></i> Forex & Money Exchange</h2>
+                    <p>Manage your foreign currency needs with our reliable forex and money exchange services. Get competitive rates and hassle-free transactions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Foreign currency exchange</li>
+                        <li><i class="fas fa-check-circle"></i> Competitive exchange rates</li>
+                        <li><i class="fas fa-check-circle"></i> Forex cards for international travel</li>
+                        <li><i class="fas fa-check-circle"></i> Travel insurance</li>
+                        <li><i class="fas fa-check-circle"></i> Quick and secure transactions</li>
+                        <li><i class="fas fa-check-circle"></i> Expert advice on currency management</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Check Forex Rates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Travel -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.18 (1).jpeg" alt="Corporate Travel">
+                </div>
+                <div class="service-info">
+                    <h2><i class="fas fa-briefcase"></i> Corporate Travel Management</h2>
+                    <p>Professional travel management services for corporate clients. We handle all your business travel needs efficiently and cost-effectively.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Business trip planning and execution</li>
+                        <li><i class="fas fa-check-circle"></i> Conference and seminar arrangements</li>
+                        <li><i class="fas fa-check-circle"></i> Team building and offsite events</li>
+                        <li><i class="fas fa-check-circle"></i> Executive travel management</li>
+                        <li><i class="fas fa-check-circle"></i> Corporate group tours</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated account manager</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Corporate Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Trips -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.38 (2).jpeg" alt="Educational Trips">
+                </div>
+                <div class="service-info">
+                    <h2><i class="fas fa-graduation-cap"></i> Educational Trips</h2>
+                    <p>Organize enriching educational tours for schools, colleges, and institutions. Combine learning with adventure and cultural experiences.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> School and college group tours</li>
+                        <li><i class="fas fa-check-circle"></i> Educational itineraries with learning focus</li>
+                        <li><i class="fas fa-check-circle"></i> Safe and supervised travel arrangements</li>
+                        <li><i class="fas fa-check-circle"></i> Cultural exchange programs</li>
+                        <li><i class="fas fa-check-circle"></i> Historical and heritage site visits</li>
+                        <li><i class="fas fa-check-circle"></i> Experienced tour leaders and guides</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Plan Educational Tour</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>We Cater To All Travelers</h2>
+                <p>Specialized packages for every type of traveler</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-users"></i></div>
+                    <h3>Family Tours</h3>
+                    <p>Kid-friendly destinations and activities designed for family bonding and unforgettable memories together.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-user"></i></div>
+                    <h3>Individual Travelers</h3>
+                    <p>Solo travel packages with flexible itineraries and opportunities to meet fellow travelers.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-user-friends"></i></div>
+                    <h3>Group Tours</h3>
+                    <p>Special packages for friend groups with exciting activities and group discounts.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-building"></i></div>
+                    <h3>Corporate Groups</h3>
+                    <p>Professional travel solutions for corporate teams, conferences, and business events.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-school"></i></div>
+                    <h3>Educational Institutions</h3>
+                    <p>Safe and educational tours for schools and colleges with learning-focused itineraries.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Honeymoon Packages</h3>
+                    <p>Romantic getaways to exotic destinations for newlyweds and couples.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need a Custom Travel Solution?</h2>
+                <p>Contact us to discuss your specific requirements and get a personalized quote</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Get Free Quote</a>
+                    <a href="https://wa.me/919952211211" class="btn btn-outline btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo/hobby india logo.png" alt="Hobby India Tours" class="footer-logo">
+                    <p class="footer-about">RC Hobby India Group of Companies - Your trusted travel partner since 2009, specializing in international and domestic tours with personalized service and unbeatable prices.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919952211211" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tour Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Destinations</h4>
+                    <ul>
+                        <li><a href="tours.html">Dubai Tours</a></li>
+                        <li><a href="tours.html">Phuket & Krabi</a></li>
+                        <li><a href="tours.html">Bali Tours</a></li>
+                        <li><a href="tours.html">Bangkok & Pattaya</a></li>
+                        <li><a href="tours.html">Singapore Tours</a></li>
+                        <li><a href="tours.html">Goa Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> #15, Srinagar, Hope College<br>Coimbatore, Tamil Nadu - 641 004</li>
+                        <li><i class="fas fa-phone"></i> +91-9952211211</li>
+                        <li><i class="fas fa-envelope"></i> hobbyindiatours@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:00 PM</li>
+                        <li><i class="fas fa-file-invoice"></i> GST: 33AIOPR7922E1Z1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RC Hobby India Group of Companies. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for travelers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hobby India Tours - Premier International & Domestic Tour Packages. Since 2009. 5000+ Happy Customers. Visa Services, Forex, Flight Booking.">
+    <meta name="keywords" content="tour packages, international tours, domestic tours, Dubai tours, Phuket tours, Bali tours, visa services, forex">
+    <title>Hobby India Tours - Discover the World, Create Memories</title>
+    <link rel="icon" type="image/png" href="assets/images/logo/fevicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo/fevicon.png">
+    <link rel="apple-touch-icon" href="assets/images/logo/fevicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919952211211?text=Hi%2C%20I%27m%20interested%20in%20your%20tour%20packages" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +91-9952211211</span>
+                        <span><i class="fas fa-envelope"></i> hobbyindiatours@gmail.com</span>
+                        <span class="hide-mobile"><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:00 PM</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" title="Coming Soon - Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Coming Soon - Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919952211211" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/hobby india logo.png" alt="Hobby India Tours Logo">
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="tours.html">Tour Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html" class="btn-primary">Get Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.16.jpeg');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Discover the World, Create Memories</h1>
+                    <p class="hero-subtitle">Experience extraordinary journeys with India's trusted travel partner since 2009</p>
+                    <div class="hero-buttons">
+                        <a href="tours.html" class="btn btn-primary">Explore Tours</a>
+                        <a href="contact.html" class="btn btn-outline">Get Free Quote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.33.jpeg');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Tropical Paradise Awaits</h1>
+                    <p class="hero-subtitle">Explore pristine beaches and crystal-clear waters of Phuket & Krabi</p>
+                    <div class="hero-buttons">
+                        <a href="tours.html" class="btn btn-primary">View Packages</a>
+                        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.37.jpeg');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Beach Bliss in Goa</h1>
+                    <p class="hero-subtitle">Sun, sand, and unforgettable adventures on India's favorite coast</p>
+                    <div class="hero-buttons">
+                        <a href="tours.html" class="btn btn-primary">Book Now</a>
+                        <a href="contact.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" onclick="changeSlide(-1)" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next" onclick="changeSlide(1)" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Quick Inquiry Form -->
+    <section class="quick-inquiry">
+        <div class="container">
+            <div class="inquiry-form-wrapper">
+                <h3><i class="fas fa-paper-plane"></i> Plan Your Dream Vacation</h3>
+                <form class="inquiry-form" id="quickInquiryForm" onsubmit="return handleFormSubmit(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <select name="destination" required>
+                        <option value="">Select Destination</option>
+                        <option value="dubai">Dubai</option>
+                        <option value="phuket">Phuket & Krabi</option>
+                        <option value="bali">Bali</option>
+                        <option value="bangkok">Bangkok & Pattaya</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="srilanka">Sri Lanka</option>
+                        <option value="vietnam">Vietnam</option>
+                        <option value="goa">Goa</option>
+                        <option value="delhi">Delhi</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Get Best Quotes</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        const form = document.getElementById('quickInquiryForm');
+        const name = form.querySelector('input[name="name"]').value.trim();
+        const email = form.querySelector('input[name="email"]').value.trim();
+        const phone = form.querySelector('input[name="phone"]').value.trim();
+        const destinationSelect = form.querySelector('select[name="destination"]');
+        const destinationText = destinationSelect.options[destinationSelect.selectedIndex].text;
+        
+        if (!name || !email || !phone || !destinationSelect.value) {
+            alert('Please fill in all fields');
+            return false;
+        }
+        
+        const messageText = `Hi! I'm interested in a tour package.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nDestination: ${destinationText}\n\nPlease send me more details.`;
+        const message = encodeURIComponent(messageText);
+        const whatsappURL = `https://wa.me/919952211211?text=${message}`;
+        
+        window.open(whatsappURL, '_blank');
+        form.reset();
+        
+        alert('Thank you! Opening WhatsApp...');
+        return false;
+    }
+    </script>
+
+    <!-- Statistics Section -->
+    <section class="stats-section" id="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stat-number" data-target="17">0</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-number" data-target="5000">0</div>
+                    <div class="stat-label">Happy Travelers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-globe-asia"></i></div>
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">Top Destinations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-award"></i></div>
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Customer Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    // Counter Animation - Inline Script
+    (function() {
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                
+                if (end === 100) {
+                    element.textContent = value + '%';
+                } else if (end === 17) {
+                    element.textContent = value;
+                } else {
+                    element.textContent = value.toLocaleString() + (progress === 1 ? '+' : '');
+                }
+                
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        function startCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                animateValue(counter, 0, target, 2000);
+            });
+        }
+
+        // Start animation when section is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                const section = document.getElementById('stats-section');
+                if (section) observer.observe(section);
+            });
+        } else {
+            const section = document.getElementById('stats-section');
+            if (section) observer.observe(section);
+        }
+    })();
+    </script>
+
+    <!-- Featured Tours -->
+    <section class="featured-tours">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Tour Packages</h2>
+                <p>Handpicked destinations for your perfect getaway</p>
+            </div>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Dubai.png" alt="Dubai Tour Package">
+                        <div class="tour-badge">International</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Dubai Extravaganza</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 4N / 5D</span>
+                            <span><i class="fas fa-users"></i> Family, Group</span>
+                        </div>
+                        <p>Experience luxury at its finest with iconic landmarks, desert safaris, and world-class shopping.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹41,000</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Phuket and Krabi.png" alt="Phuket & Krabi Tour Package">
+                        <div class="tour-badge">Best Seller</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Phuket & Krabi Paradise</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 4N / 5D</span>
+                            <span><i class="fas fa-users"></i> Couples, Family</span>
+                        </div>
+                        <p>Pristine beaches, turquoise waters, and unforgettable island hopping adventures await you.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹38,500</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Bali.png" alt="Bali Tour Package">
+                        <div class="tour-badge">Trending</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Magical Bali Experience</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 4N / 5D</span>
+                            <span><i class="fas fa-users"></i> Couples, Groups</span>
+                        </div>
+                        <p>Discover temples, rice terraces, beaches, and the rich Balinese culture in this tropical paradise.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹33,600</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Bangkok and Pattaya.png" alt="Bangkok & Pattaya Tour Package">
+                        <div class="tour-badge">Value Deal</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Bangkok & Pattaya Delight</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 4N / 5D</span>
+                            <span><i class="fas fa-users"></i> All Groups</span>
+                        </div>
+                        <p>Vibrant city life, stunning temples, and beach relaxation combined in one amazing package.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹26,000</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Goa.png" alt="Goa Tour Package">
+                        <div class="tour-badge">Domestic</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Goa Beach Escape</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 3N / 4D</span>
+                            <span><i class="fas fa-users"></i> All Groups</span>
+                        </div>
+                        <p>India's favorite beach destination with vibrant nightlife, water sports, and Portuguese heritage.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹15,000</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Singapore.png" alt="Singapore Tour Package">
+                        <div class="tour-badge">Luxury</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Singapore Splendor</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 3N / 4D</span>
+                            <span><i class="fas fa-users"></i> Family, Corporate</span>
+                        </div>
+                        <p>The Lion City awaits with world-class attractions, Gardens by the Bay, and Universal Studios.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹40,300</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="tours.html" class="btn btn-secondary">View All Packages <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Complete travel solutions for every journey</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3>International Tours</h3>
+                    <p>Customized tour packages to dream destinations across the world</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Domestic Tours</h3>
+                    <p>Explore incredible India with our expertly crafted domestic packages</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-plane-departure"></i></div>
+                    <h3>Flight Booking</h3>
+                    <p>Best deals on domestic and international flight tickets</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-passport"></i></div>
+                    <h3>Visa Services</h3>
+                    <p>Hassle-free visa assistance for all international destinations</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <h3>Forex Services</h3>
+                    <p>Competitive foreign exchange rates and money transfer services</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Corporate Travel</h3>
+                    <p>Professional travel management for corporate clients</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-users"></i></div>
+                    <h3>Group Tours</h3>
+                    <p>Special packages for groups with exclusive benefits</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Educational Trips</h3>
+                    <p>Learning journeys for schools and educational institutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Hobby India Tours?</h2>
+                <p>Your trusted travel partner since 2009</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Trusted & Reliable</h3>
+                    <p>17 years of excellence in creating memorable travel experiences with 5000+ satisfied customers</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-rupee-sign"></i></div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>Competitive pricing with transparent costs and no hidden charges</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support for all your travel needs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-edit"></i></div>
+                    <h3>Customized Packages</h3>
+                    <p>Tailored itineraries designed to match your preferences and budget</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Licensed & Authorized</h3>
+                    <p>GST registered and fully authorized travel agency</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Expert Team</h3>
+                    <p>Experienced travel professionals dedicated to your satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Trips -->
+    <section class="upcoming-trips">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-calendar-week"></i> Upcoming Group Departures</h2>
+                <p>Join our scheduled group tours with guaranteed departures</p>
+            </div>
+            <div class="trips-slider">
+                <div class="trip-item">
+                    <div class="trip-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">FEB</span>
+                    </div>
+                    <div class="trip-info">
+                        <h4>Dubai Extravaganza</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 4N / 5D</p>
+                        <span class="seats-left">8 Seats Left</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-small">Book Now</a>
+                </div>
+                <div class="trip-item">
+                    <div class="trip-date">
+                        <span class="date-day">22</span>
+                        <span class="date-month">FEB</span>
+                    </div>
+                    <div class="trip-info">
+                        <h4>Phuket & Krabi</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 4N / 5D</p>
+                        <span class="seats-left">12 Seats Left</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-small">Book Now</a>
+                </div>
+                <div class="trip-item">
+                    <div class="trip-date">
+                        <span class="date-day">05</span>
+                        <span class="date-month">MAR</span>
+                    </div>
+                    <div class="trip-info">
+                        <h4>Bali Adventure</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 4N / 5D</p>
+                        <span class="seats-left">15 Seats Left</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-small">Book Now</a>
+                </div>
+                <div class="trip-item">
+                    <div class="trip-date">
+                        <span class="date-day">12</span>
+                        <span class="date-month">MAR</span>
+                    </div>
+                    <div class="trip-info">
+                        <h4>Singapore Splendor</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 3N / 4D</p>
+                        <span class="seats-left">10 Seats Left</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-small">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Let us create an unforgettable travel experience tailored just for you</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Plan My Trip</a>
+                    <a href="https://wa.me/919952211211" class="btn btn-outline btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo/hobby india logo.png" alt="Hobby India Tours" class="footer-logo">
+                    <p class="footer-about">RC Hobby India Group of Companies - Your trusted travel partner since 2009, specializing in international and domestic tours with personalized service and unbeatable prices.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919952211211" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tour Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Destinations</h4>
+                    <ul>
+                        <li><a href="tours.html">Dubai Tours</a></li>
+                        <li><a href="tours.html">Phuket & Krabi</a></li>
+                        <li><a href="tours.html">Bali Tours</a></li>
+                        <li><a href="tours.html">Bangkok & Pattaya</a></li>
+                        <li><a href="tours.html">Singapore Tours</a></li>
+                        <li><a href="tours.html">Goa Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> #15, Srinagar, Hope College<br>Coimbatore, Tamil Nadu - 641 004</li>
+                        <li><i class="fas fa-phone"></i> +91-9952211211</li>
+                        <li><i class="fas fa-envelope"></i> hobbyindiatours@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:00 PM</li>
+                        <li><i class="fas fa-file-invoice"></i> GST: 33AIOPR7922E1Z1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RC Hobby India Group of Companies. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for travelers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our International & Domestic Tour Packages - Dubai, Phuket, Bali, Bangkok, Singapore, Goa and more. Best prices guaranteed.">
+    <title>Tour Packages - Hobby India Tours</title>
+    <link rel="icon" type="image/png" href="assets/images/logo/fevicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo/fevicon.png">
+    <link rel="apple-touch-icon" href="assets/images/logo/fevicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(59, 130, 246, 0.8) 100%), url('assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.45.jpeg') center/cover;
+            padding: 100px 0 60px;
+            text-align: center;
+            color: var(--white);
+        }
+        .page-hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .page-hero p {
+            font-size: 20px;
+        }
+        .filter-section {
+            background: var(--white);
+            padding: 30px 0;
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 141px;
+            z-index: 998;
+        }
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            background: var(--white);
+            color: var(--text-dark);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        .tours-section {
+            padding: 60px 0;
+        }
+        .tour-details {
+            background: var(--light-color);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .tour-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        .tour-details li {
+            padding: 8px 0;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tour-details li i {
+            color: var(--success-color);
+        }
+        .package-type {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 5px 5px 0 0;
+        }
+        .type-family {
+            background: #DBEAFE;
+            color: #1E40AF;
+        }
+        .type-individual {
+            background: #FEF3C7;
+            color: #92400E;
+        }
+        .type-corporate {
+            background: #E0E7FF;
+            color: #4338CA;
+        }
+        .type-institution {
+            background: #D1FAE5;
+            color: #065F46;
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919952211211?text=Hi%2C%20I%27m%20interested%20in%20your%20tour%20packages" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +91-9952211211</span>
+                        <span><i class="fas fa-envelope"></i> hobbyindiatours@gmail.com</span>
+                        <span class="hide-mobile"><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:00 PM</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" title="Coming Soon - Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Coming Soon - Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919952211211" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/hobby india logo.png" alt="Hobby India Tours Logo">
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html" class="active">Tour Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html" class="btn-primary">Get Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Tour Packages</h1>
+            <p>Explore our handpicked destinations with unbeatable prices</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterTours('all', this)">All Packages</button>
+                <button class="filter-btn" onclick="filterTours('international', this)">International</button>
+                <button class="filter-btn" onclick="filterTours('domestic', this)">Domestic</button>
+                <button class="filter-btn" onclick="filterTours('family', this)">Family</button>
+                <button class="filter-btn" onclick="filterTours('corporate', this)">Corporate</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="tours-section">
+        <div class="container">
+            <div class="tours-grid">
+                <!-- Dubai Package -->
+                <div class="tour-card" data-category="international,family,corporate">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Dubai.png" alt="Dubai Tour Package">
+                        <div class="tour-badge">International</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Dubai Extravaganza</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 4N / 5D</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Dubai, UAE</span>
+                        </div>
+                        <p>Experience the luxury of Dubai with Burj Khalifa, Desert Safari, Dubai Mall, and Marina. World-class shopping and dining await!</p>
+                        <div class="tour-details">
+                            <h4 style="margin-bottom: 10px; color: var(--dark-color);">Package Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> 4 Star Hotel Accommodation</li>
+                                <li><i class="fas fa-check-circle"></i> Daily Breakfast</li>
+                                <li><i class="fas fa-check-circle"></i> Airport Transfers</li>
+                                <li><i class="fas fa-check-circle"></i> City Tour</li>
+                                <li><i class="fas fa-check-circle"></i> Desert Safari</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <span class="package-type type-family">Family</span>
+                            <span class="package-type type-individual">Individual</span>
+                            <span class="package-type type-corporate">Corporate</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹41,000</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phuket & Krabi Package -->
+                <div class="tour-card" data-category="international,family">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Phuket and Krabi.png" alt="Phuket & Krabi Tour Package">
+                        <div class="tour-badge">Best Seller</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Phuket & Krabi Paradise</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 4N / 5D</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Thailand</span>
+                        </div>
+                        <p>Crystal clear waters, pristine beaches, island hopping, Phi Phi Islands, James Bond Island, and stunning limestone cliffs.</p>
+                        <div class="tour-details">
+                            <h4 style="margin-bottom: 10px; color: var(--dark-color);">Package Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Beach Resort Stay</li>
+                                <li><i class="fas fa-check-circle"></i> Daily Breakfast</li>
+                                <li><i class="fas fa-check-circle"></i> Island Tours</li>
+                                <li><i class="fas fa-check-circle"></i> Speedboat Transfers</li>
+                                <li><i class="fas fa-check-circle"></i> Snorkeling Equipment</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <span class="package-type type-family">Family</span>
+                            <span class="package-type type-individual">Individual</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹38,500</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bali Package -->
+                <div class="tour-card" data-category="international,family">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Bali.png" alt="Bali Tour Package">
+                        <div class="tour-badge">Trending</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Magical Bali Experience</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 4N / 5D</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Bali, Indonesia</span>
+                        </div>
+                        <p>Ancient temples, rice terraces, beaches, waterfalls, monkey forest, traditional dance, and the rich Balinese culture.</p>
+                        <div class="tour-details">
+                            <h4 style="margin-bottom: 10px; color: var(--dark-color);">Package Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Villa/Resort Accommodation</li>
+                                <li><i class="fas fa-check-circle"></i> Daily Breakfast</li>
+                                <li><i class="fas fa-check-circle"></i> Temple Tours</li>
+                                <li><i class="fas fa-check-circle"></i> Rice Terrace Visit</li>
+                                <li><i class="fas fa-check-circle"></i> Cultural Show</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <span class="package-type type-family">Family</span>
+                            <span class="package-type type-individual">Individual</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹33,600</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bangkok & Pattaya Package -->
+                <div class="tour-card" data-category="international,family">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Bangkok and Pattaya.png" alt="Bangkok & Pattaya Tour Package">
+                        <div class="tour-badge">Value Deal</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Bangkok & Pattaya Delight</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 4N / 5D</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Thailand</span>
+                        </div>
+                        <p>Vibrant temples, Grand Palace, Floating Market, Coral Island, Alcazar Show, shopping, and authentic Thai cuisine.</p>
+                        <div class="tour-details">
+                            <h4 style="margin-bottom: 10px; color: var(--dark-color);">Package Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> 3/4 Star Hotels</li>
+                                <li><i class="fas fa-check-circle"></i> Daily Breakfast</li>
+                                <li><i class="fas fa-check-circle"></i> Temple Tours</li>
+                                <li><i class="fas fa-check-circle"></i> Coral Island Trip</li>
+                                <li><i class="fas fa-check-circle"></i> Alcazar Show Tickets</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <span class="package-type type-family">Family</span>
+                            <span class="package-type type-individual">Individual</span>
+                            <span class="package-type type-institution">Institution</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹26,000</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vietnam Package -->
+                <div class="tour-card" data-category="international,family">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Vietnam.png" alt="Vietnam Tour Package">
+                        <div class="tour-badge">International</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Vietnam Discovery</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 4N / 5D</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Vietnam</span>
+                        </div>
+                        <p>Halong Bay cruise, Ho Chi Minh City, Cu Chi Tunnels, Mekong Delta, French colonial architecture, and Vietnamese cuisine.</p>
+                        <div class="tour-details">
+                            <h4 style="margin-bottom: 10px; color: var(--dark-color);">Package Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Hotel Accommodation</li>
+                                <li><i class="fas fa-check-circle"></i> Daily Breakfast</li>
+                                <li><i class="fas fa-check-circle"></i> Halong Bay Cruise</li>
+                                <li><i class="fas fa-check-circle"></i> City Tours</li>
+                                <li><i class="fas fa-check-circle"></i> Cu Chi Tunnels Visit</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <span class="package-type type-family">Family</span>
+                            <span class="package-type type-individual">Individual</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹31,800</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sri Lanka Package -->
+                <div class="tour-card" data-category="international,family">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Sri Lanka.png" alt="Sri Lanka Tour Package">
+                        <div class="tour-badge">International</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Sri Lanka Explorer</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 3N / 4D</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Sri Lanka</span>
+                        </div>
+                        <p>Ancient temples, tea plantations, elephant orphanage, Sigiriya Rock, Kandy Temple, scenic train rides, and pristine beaches.</p>
+                        <div class="tour-details">
+                            <h4 style="margin-bottom: 10px; color: var(--dark-color);">Package Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Hotel Stay</li>
+                                <li><i class="fas fa-check-circle"></i> Daily Breakfast</li>
+                                <li><i class="fas fa-check-circle"></i> Temple Tours</li>
+                                <li><i class="fas fa-check-circle"></i> Elephant Orphanage</li>
+                                <li><i class="fas fa-check-circle"></i> Tea Plantation Visit</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <span class="package-type type-family">Family</span>
+                            <span class="package-type type-individual">Individual</span>
+                            <span class="package-type type-institution">Institution</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹26,900</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Malaysia Package -->
+                <div class="tour-card" data-category="international,family,corporate">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Malaysia.png" alt="Malaysia Tour Package">
+                        <div class="tour-badge">International</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Malaysian Adventure</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 4N / 5D</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Malaysia</span>
+                        </div>
+                        <p>Kuala Lumpur, Petronas Towers, Genting Highlands, Batu Caves, Sunway Lagoon, shopping, and diverse Malaysian culture.</p>
+                        <div class="tour-details">
+                            <h4 style="margin-bottom: 10px; color: var(--dark-color);">Package Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Hotel Accommodation</li>
+                                <li><i class="fas fa-check-circle"></i> Daily Breakfast</li>
+                                <li><i class="fas fa-check-circle"></i> City Tour</li>
+                                <li><i class="fas fa-check-circle"></i> Genting Highland Trip</li>
+                                <li><i class="fas fa-check-circle"></i> Batu Caves Visit</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <span class="package-type type-family">Family</span>
+                            <span class="package-type type-individual">Individual</span>
+                            <span class="package-type type-corporate">Corporate</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹29,500</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Singapore Package -->
+                <div class="tour-card" data-category="international,family,corporate">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Singapore.png" alt="Singapore Tour Package">
+                        <div class="tour-badge">Luxury</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Singapore Splendor</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 3N / 4D</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Singapore</span>
+                        </div>
+                        <p>Marina Bay Sands, Gardens by the Bay, Universal Studios, Sentosa Island, Night Safari, and world-class shopping.</p>
+                        <div class="tour-details">
+                            <h4 style="margin-bottom: 10px; color: var(--dark-color);">Package Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> 4 Star Hotel</li>
+                                <li><i class="fas fa-check-circle"></i> Daily Breakfast</li>
+                                <li><i class="fas fa-check-circle"></i> City Tour</li>
+                                <li><i class="fas fa-check-circle"></i> Sentosa Island</li>
+                                <li><i class="fas fa-check-circle"></i> Night Safari</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <span class="package-type type-family">Family</span>
+                            <span class="package-type type-corporate">Corporate</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹40,300</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goa Package -->
+                <div class="tour-card" data-category="domestic,family,corporate">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Goa.png" alt="Goa Tour Package">
+                        <div class="tour-badge">Domestic</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Goa Beach Escape</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 3N / 4D</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Goa, India</span>
+                        </div>
+                        <p>Beautiful beaches, water sports, Portuguese churches, nightlife, beach shacks, Dudhsagar Falls, and Old Goa heritage.</p>
+                        <div class="tour-details">
+                            <h4 style="margin-bottom: 10px; color: var(--dark-color);">Package Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Beach Resort Stay</li>
+                                <li><i class="fas fa-check-circle"></i> Daily Breakfast</li>
+                                <li><i class="fas fa-check-circle"></i> North & South Goa Tour</li>
+                                <li><i class="fas fa-check-circle"></i> Water Sports Options</li>
+                                <li><i class="fas fa-check-circle"></i> Airport/Station Pickup</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <span class="package-type type-family">Family</span>
+                            <span class="package-type type-individual">Individual</span>
+                            <span class="package-type type-corporate">Corporate</span>
+                            <span class="package-type type-institution">Institution</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹15,000</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delhi Package -->
+                <div class="tour-card" data-category="domestic,family">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Delhi.png" alt="Delhi Tour Package">
+                        <div class="tour-badge">Domestic</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Delhi Heritage Tour</h3>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-calendar"></i> 3N / 4D</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Delhi, India</span>
+                        </div>
+                        <p>Red Fort, Qutub Minar, India Gate, Lotus Temple, Akshardham, Chandni Chowk, and Mughal heritage sites.</p>
+                        <div class="tour-details">
+                            <h4 style="margin-bottom: 10px; color: var(--dark-color);">Package Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Hotel Accommodation</li>
+                                <li><i class="fas fa-check-circle"></i> Daily Breakfast</li>
+                                <li><i class="fas fa-check-circle"></i> Old & New Delhi Tour</li>
+                                <li><i class="fas fa-check-circle"></i> Monument Entry Tickets</li>
+                                <li><i class="fas fa-check-circle"></i> Local Transportation</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <span class="package-type type-family">Family</span>
+                            <span class="package-type type-individual">Individual</span>
+                            <span class="package-type type-institution">Institution</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹18,000</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Can't Find Your Dream Destination?</h2>
+                <p>Contact us for customized tour packages tailored to your preferences and budget</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Request Custom Package</a>
+                    <a href="https://wa.me/919952211211" class="btn btn-outline btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo/hobby india logo.png" alt="Hobby India Tours" class="footer-logo">
+                    <p class="footer-about">RC Hobby India Group of Companies - Your trusted travel partner since 2009, specializing in international and domestic tours with personalized service and unbeatable prices.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919952211211" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tour Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Destinations</h4>
+                    <ul>
+                        <li><a href="tours.html">Dubai Tours</a></li>
+                        <li><a href="tours.html">Phuket & Krabi</a></li>
+                        <li><a href="tours.html">Bali Tours</a></li>
+                        <li><a href="tours.html">Bangkok & Pattaya</a></li>
+                        <li><a href="tours.html">Singapore Tours</a></li>
+                        <li><a href="tours.html">Goa Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> #15, Srinagar, Hope College<br>Coimbatore, Tamil Nadu - 641 004</li>
+                        <li><i class="fas fa-phone"></i> +91-9952211211</li>
+                        <li><i class="fas fa-envelope"></i> hobbyindiatours@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:00 PM</li>
+                        <li><i class="fas fa-file-invoice"></i> GST: 33AIOPR7922E1Z1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RC Hobby India Group of Companies. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for travelers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

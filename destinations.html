@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our destinations - Dubai, Phuket, Krabi, Goa, Bali, Bangkok, Singapore, Malaysia, Sri Lanka, Vietnam. Photo gallery and videos.">
+    <title>Destinations Gallery - Hobby India Tours</title>
+    <link rel="icon" type="image/png" href="assets/images/logo/fevicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo/fevicon.png">
+    <link rel="apple-touch-icon" href="assets/images/logo/fevicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(59, 130, 246, 0.8) 100%), url('assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.34 (2).jpeg') center/cover;
+            padding: 100px 0 60px;
+            text-align: center;
+            color: var(--white);
+        }
+        .page-hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .page-hero p {
+            font-size: 20px;
+        }
+        .destinations-section {
+            padding: 80px 0;
+        }
+        .destination-block {
+            margin-bottom: 80px;
+        }
+        .destination-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        .destination-header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .destination-header h2 {
+            font-size: 36px;
+            color: var(--dark-color);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            padding: 20px;
+            color: var(--white);
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        .video-item {
+            position: relative;
+            background: var(--dark-color);
+        }
+        .video-item::before {
+            content: '\f04b';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            color: var(--white);
+            z-index: 2;
+            opacity: 0.9;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        .lightbox-content img,
+        .lightbox-content video {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 10px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--dark-color);
+            z-index: 10000;
+        }
+        .destination-info {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .destination-info p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .destination-cta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            .gallery-item {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919952211211?text=Hi%2C%20I%27m%20interested%20in%20your%20tour%20packages" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +91-9952211211</span>
+                        <span><i class="fas fa-envelope"></i> hobbyindiatours@gmail.com</span>
+                        <span class="hide-mobile"><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:00 PM</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" title="Coming Soon - Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Coming Soon - Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919952211211" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/hobby india logo.png" alt="Hobby India Tours Logo">
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tour Packages</a></li>
+                        <li><a href="destinations.html" class="active">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html" class="btn-primary">Get Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Explore Our Destinations</h1>
+            <p>A visual journey through our amazing travel destinations</p>
+        </div>
+    </section>
+
+    <!-- Destinations Gallery -->
+    <section class="destinations-section">
+        <div class="container">
+            <!-- Dubai -->
+            <div class="destination-block">
+                <div class="destination-header">
+                    <img src="assets/images/thumbnails/Dubai.png" alt="Dubai">
+                    <h2>Dubai, UAE</h2>
+                </div>
+                <div class="destination-info">
+                    <p>Experience the epitome of luxury in Dubai - from the world's tallest building Burj Khalifa to stunning desert safaris, pristine beaches, and world-class shopping destinations. A perfect blend of modern marvels and traditional Arabian culture.</p>
+                    <div class="destination-cta">
+                        <a href="tours.html" class="btn btn-primary">View Dubai Packages</a>
+                        <span style="color: var(--primary-color); font-weight: 600; font-size: 18px;">Starting from ₹41,000</span>
+                    </div>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.16.jpeg')">
+                        <img src="assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.16.jpeg" alt="Dubai 1">
+                        <div class="gallery-overlay">
+                            <p>Dubai Skyline</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.16 (1).jpeg')">
+                        <img src="assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.16 (1).jpeg" alt="Dubai 2">
+                        <div class="gallery-overlay">
+                            <p>Burj Khalifa</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.16 (2).jpeg')">
+                        <img src="assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.16 (2).jpeg" alt="Dubai 3">
+                        <div class="gallery-overlay">
+                            <p>Dubai Marina</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.17.jpeg')">
+                        <img src="assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.17.jpeg" alt="Dubai 4">
+                        <div class="gallery-overlay">
+                            <p>Luxury Dubai</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.18.jpeg')">
+                        <img src="assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.18.jpeg" alt="Dubai 5">
+                        <div class="gallery-overlay">
+                            <p>Desert Safari</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.44.jpeg')">
+                        <img src="assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.44.jpeg" alt="Dubai 6">
+                        <div class="gallery-overlay">
+                            <p>Dubai Attractions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phuket & Krabi -->
+            <div class="destination-block">
+                <div class="destination-header">
+                    <img src="assets/images/thumbnails/Phuket and Krabi.png" alt="Phuket & Krabi">
+                    <h2>Phuket & Krabi, Thailand</h2>
+                </div>
+                <div class="destination-info">
+                    <p>Discover Thailand's tropical paradise with crystal-clear turquoise waters, stunning limestone cliffs, pristine beaches, and vibrant marine life. Island hopping to Phi Phi Islands, James Bond Island, and relaxing beach resorts await you.</p>
+                    <div class="destination-cta">
+                        <a href="tours.html" class="btn btn-primary">View Phuket & Krabi Packages</a>
+                        <span style="color: var(--primary-color); font-weight: 600; font-size: 18px;">Starting from ₹38,500</span>
+                    </div>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.32.jpeg')">
+                        <img src="assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.32.jpeg" alt="Phuket 1">
+                        <div class="gallery-overlay">
+                            <p>Phuket Beach</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.32 (1).jpeg')">
+                        <img src="assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.32 (1).jpeg" alt="Phuket 2">
+                        <div class="gallery-overlay">
+                            <p>Crystal Clear Waters</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.33.jpeg')">
+                        <img src="assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.33.jpeg" alt="Phuket 3">
+                        <div class="gallery-overlay">
+                            <p>Island Paradise</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.33 (1).jpeg')">
+                        <img src="assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.33 (1).jpeg" alt="Phuket 4">
+                        <div class="gallery-overlay">
+                            <p>Tropical Beauty</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.34.jpeg')">
+                        <img src="assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.34.jpeg" alt="Phuket 5">
+                        <div class="gallery-overlay">
+                            <p>Krabi Cliffs</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item video-item" onclick="openLightbox('assets/images/photos/Phuket and grabi/WhatsApp Video 2026-01-12 at 14.12.34.mp4', true)">
+                        <img src="assets/images/photos/Phuket and grabi/WhatsApp Image 2026-01-12 at 14.12.34 (2).jpeg" alt="Phuket Video">
+                        <div class="gallery-overlay">
+                            <p>Watch Video Tour</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goa -->
+            <div class="destination-block">
+                <div class="destination-header">
+                    <img src="assets/images/thumbnails/Goa.png" alt="Goa">
+                    <h2>Goa, India</h2>
+                </div>
+                <div class="destination-info">
+                    <p>India's favorite beach destination with golden sands, swaying palms, Portuguese architecture, vibrant nightlife, and water sports. Experience the perfect blend of relaxation, adventure, and cultural heritage in this coastal paradise.</p>
+                    <div class="destination-cta">
+                        <a href="tours.html" class="btn btn-primary">View Goa Packages</a>
+                        <span style="color: var(--primary-color); font-weight: 600; font-size: 18px;">Starting from ₹15,000</span>
+                    </div>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.37.jpeg')">
+                        <img src="assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.37.jpeg" alt="Goa 1">
+                        <div class="gallery-overlay">
+                            <p>Goa Beaches</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.37 (1).jpeg')">
+                        <img src="assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.37 (1).jpeg" alt="Goa 2">
+                        <div class="gallery-overlay">
+                            <p>Beach Shacks</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.37 (2).jpeg')">
+                        <img src="assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.37 (2).jpeg" alt="Goa 3">
+                        <div class="gallery-overlay">
+                            <p>Coastal Views</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.38.jpeg')">
+                        <img src="assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.38.jpeg" alt="Goa 4">
+                        <div class="gallery-overlay">
+                            <p>Water Sports</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.38 (1).jpeg')">
+                        <img src="assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.38 (1).jpeg" alt="Goa 5">
+                        <div class="gallery-overlay">
+                            <p>Sunset Paradise</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.38 (2).jpeg')">
+                        <img src="assets/images/photos/goa/WhatsApp Image 2026-01-12 at 14.13.38 (2).jpeg" alt="Goa 6">
+                        <div class="gallery-overlay">
+                            <p>Goan Heritage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Destinations -->
+            <div class="section-header" style="margin-top: 80px;">
+                <h2>More Amazing Destinations</h2>
+                <p>We also offer packages to these incredible destinations</p>
+            </div>
+            <div class="tours-grid" style="margin-top: 40px;">
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Bali.png" alt="Bali">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Ancient temples, rice terraces, beaches, and rich Balinese culture.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹33,600</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Bangkok and Pattaya.png" alt="Bangkok & Pattaya">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Bangkok & Pattaya</h3>
+                        <p>Vibrant temples, Grand Palace, Coral Island, and Thai cuisine.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹26,000</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Singapore.png" alt="Singapore">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Singapore</h3>
+                        <p>Marina Bay, Gardens by the Bay, Universal Studios, Night Safari.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹40,300</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Malaysia.png" alt="Malaysia">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Malaysia</h3>
+                        <p>Petronas Towers, Genting Highlands, Batu Caves, diverse culture.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹29,500</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Sri Lanka.png" alt="Sri Lanka">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Sri Lanka</h3>
+                        <p>Sigiriya Rock, Kandy Temple, tea plantations, beaches.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹26,900</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <img src="assets/images/thumbnails/Vietnam.png" alt="Vietnam">
+                    </div>
+                    <div class="tour-content">
+                        <h3>Vietnam</h3>
+                        <p>Halong Bay cruise, Ho Chi Minh City, Mekong Delta.</p>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price">₹31,800</span>
+                            </div>
+                            <a href="tours.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience These Destinations?</h2>
+                <p>Contact us now to book your dream vacation</p>
+                <div class="cta-buttons">
+                    <a href="tours.html" class="btn btn-primary btn-large">View All Packages</a>
+                    <a href="contact.html" class="btn btn-outline btn-large">Get Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-close" onclick="closeLightbox()">✕</div>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightboxImage" src="" alt="Gallery Image">
+            <video id="lightboxVideo" controls style="display: none;">
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo/hobby india logo.png" alt="Hobby India Tours" class="footer-logo">
+                    <p class="footer-about">RC Hobby India Group of Companies - Your trusted travel partner since 2009, specializing in international and domestic tours with personalized service and unbeatable prices.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919952211211" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tour Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Destinations</h4>
+                    <ul>
+                        <li><a href="tours.html">Dubai Tours</a></li>
+                        <li><a href="tours.html">Phuket & Krabi</a></li>
+                        <li><a href="tours.html">Bali Tours</a></li>
+                        <li><a href="tours.html">Bangkok & Pattaya</a></li>
+                        <li><a href="tours.html">Singapore Tours</a></li>
+                        <li><a href="tours.html">Goa Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> #15, Srinagar, Hope College<br>Coimbatore, Tamil Nadu - 641 004</li>
+                        <li><i class="fas fa-phone"></i> +91-9952211211</li>
+                        <li><i class="fas fa-envelope"></i> hobbyindiatours@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:00 PM</li>
+                        <li><i class="fas fa-file-invoice"></i> GST: 33AIOPR7922E1Z1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RC Hobby India Group of Companies. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for travelers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function openLightbox(src, isVideo = false) {
+            const lightbox = document.getElementById('lightbox');
+            const image = document.getElementById('lightboxImage');
+            const video = document.getElementById('lightboxVideo');
+            
+            if (isVideo) {
+                image.style.display = 'none';
+                video.style.display = 'block';
+                video.querySelector('source').src = src;
+                video.load();
+            } else {
+                video.style.display = 'none';
+                image.style.display = 'block';
+                image.src = src;
+            }
+            
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const video = document.getElementById('lightboxVideo');
+            lightbox.classList.remove('active');
+            video.pause();
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

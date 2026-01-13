@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Hobby India Tours - Since 2009, serving 5000+ happy travelers. RC Hobby India Group of Companies, Coimbatore.">
+    <title>About Us - Hobby India Tours</title>
+    <link rel="icon" type="image/png" href="assets/images/logo/fevicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo/fevicon.png">
+    <link rel="apple-touch-icon" href="assets/images/logo/fevicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(59, 130, 246, 0.8) 100%), url('assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.46 (2).jpeg') center/cover;
+            padding: 100px 0 60px;
+            text-align: center;
+            color: var(--white);
+        }
+        .page-hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .page-hero p {
+            font-size: 20px;
+        }
+        .about-section {
+            padding: 80px 0;
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        .about-text p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .highlight-box {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        .highlight-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        .mv-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            border-top: 5px solid var(--primary-color);
+        }
+        .mv-card h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .mv-card h3 i {
+            color: var(--secondary-color);
+            font-size: 32px;
+        }
+        .mv-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        .values-section {
+            background: var(--light-color);
+            padding: 60px 0;
+            border-radius: 15px;
+            margin-bottom: 80px;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .value-item {
+            text-align: center;
+            padding: 30px;
+        }
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            color: var(--white);
+        }
+        .value-item h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        .value-item p {
+            color: var(--text-gray);
+        }
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .timeline-year {
+            text-align: right;
+            padding-right: 40px;
+        }
+        .timeline-year h3 {
+            font-size: 48px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        .timeline-content {
+            padding-left: 40px;
+            border-left: 3px solid var(--secondary-color);
+        }
+        .timeline-content h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        .timeline-content p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            .timeline-item {
+                grid-template-columns: 1fr;
+            }
+            .timeline-year {
+                text-align: left;
+                padding-right: 0;
+            }
+            .timeline-content {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919952211211?text=Hi%2C%20I%27m%20interested%20in%20your%20tour%20packages" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +91-9952211211</span>
+                        <span><i class="fas fa-envelope"></i> hobbyindiatours@gmail.com</span>
+                        <span class="hide-mobile"><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:00 PM</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" title="Coming Soon - Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Coming Soon - Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919952211211" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/hobby india logo.png" alt="Hobby India Tours Logo">
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tour Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html" class="active">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html" class="btn-primary">Get Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About Hobby India Tours</h1>
+            <p>Your Trusted Travel Partner Since 2009</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/images/photos/dubai/WhatsApp Image 2026-01-12 at 14.12.45 (2).jpeg" alt="Hobby India Tours">
+                </div>
+                <div class="about-text">
+                    <h2>Discover the World, Create Memories</h2>
+                    <p>Welcome to <strong>Hobby India Tours</strong>, a premier travel agency specializing in international tours and travel services. With a deep understanding of the diverse needs and preferences of travelers, we offer a comprehensive range of services to cater to corporate clients, groups, and individual travelers alike.</p>
+                    <p>As part of <strong>RC Hobby India Group of Companies</strong>, our team of dedicated professionals is committed to delivering unparalleled travel experiences, ensuring your journey is seamless, memorable, and hassle-free.</p>
+                    <p>At Hobby India Tours, we provide a wide array of services, including personalized tour packages that are meticulously crafted to meet your specific requirements. Whether you seek relaxation on pristine beaches, adventure in breathtaking landscapes, or cultural immersion in vibrant cities, our team will curate an itinerary that suits your desires.</p>
+                    <div class="highlight-box">
+                        <h3><i class="fas fa-award"></i> 17 Years of Excellence</h3>
+                        <p>Since 2009, we have been creating unforgettable travel experiences for over 5,000 happy customers across 10+ destinations worldwide.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission & Vision -->
+            <div class="section-header">
+                <h2>Our Mission & Vision</h2>
+                <p>What drives us to serve you better every day</p>
+            </div>
+            <div class="mission-vision">
+                <div class="mv-card">
+                    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                    <p>To provide exceptional travel experiences that exceed our customers' expectations through personalized service, competitive pricing, and unwavering commitment to quality. We strive to make every journey memorable, safe, and hassle-free for families, individuals, corporates, and educational institutions.</p>
+                </div>
+                <div class="mv-card">
+                    <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                    <p>To become India's most trusted and preferred travel agency, known for creating transformative travel experiences that inspire, educate, and connect people across cultures. We envision a world where travel is accessible, sustainable, and enriching for all.</p>
+                </div>
+            </div>
+
+            <!-- Our Values -->
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="values-section">
+                <div class="container">
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                            <h4>Trust & Integrity</h4>
+                            <p>Building lasting relationships through transparency and honesty</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fas fa-star"></i></div>
+                            <h4>Excellence</h4>
+                            <p>Delivering exceptional quality in every aspect of our service</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fas fa-users"></i></div>
+                            <h4>Customer First</h4>
+                            <p>Your satisfaction and happiness are our top priorities</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h4>Innovation</h4>
+                            <p>Constantly improving and adapting to serve you better</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Journey -->
+            <div class="section-header">
+                <h2>Our Journey</h2>
+                <p>Growing and evolving since 2009</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <h3>2009</h3>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>The Beginning</h4>
+                        <p>Hobby India Tours was established in Coimbatore with a vision to make international travel accessible and affordable for Indian travelers.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <h3>2015</h3>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Expansion</h4>
+                        <p>Expanded our services to include domestic tours, corporate travel management, and educational trips. Crossed 2,000 happy customers milestone.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <h3>2020</h3>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Digital Transformation</h4>
+                        <p>Embraced digital platforms to provide seamless booking experiences and virtual travel consultations during challenging times.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <h3>2026</h3>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Today</h4>
+                        <p>Proud to serve 5,000+ satisfied customers with 10+ international and domestic destinations. Continuing to innovate and expand our offerings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="section-header" style="margin-top: 60px;">
+                <h2>Why Travel With Us?</h2>
+                <p>What makes Hobby India Tours your best choice</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>GST Registered & Licensed</h3>
+                    <p>Fully authorized travel agency with GST No: 33AIOPR7922E1Z1. Your bookings are secure and legitimate.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>Experienced Team</h3>
+                    <p>Our travel experts have 17+ years of industry experience and in-depth destination knowledge.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>Competitive pricing with no hidden charges. We ensure you get the best value for your money.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support via phone, WhatsApp, and email for all your travel needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-passport"></i></div>
+                    <h3>Visa Assistance</h3>
+                    <p>Complete visa processing support and guidance for all international destinations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-plane-departure"></i></div>
+                    <h3>Complete Travel Solutions</h3>
+                    <p>From flights to hotels, visa to forex - we handle everything for a stress-free vacation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Explore the World?</h2>
+                <p>Join 5,000+ happy travelers and create your own unforgettable memories</p>
+                <div class="cta-buttons">
+                    <a href="tours.html" class="btn btn-primary btn-large">View Tour Packages</a>
+                    <a href="contact.html" class="btn btn-outline btn-large">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/images/logo/hobby india logo.png" alt="Hobby India Tours" class="footer-logo">
+                    <p class="footer-about">RC Hobby India Group of Companies - Your trusted travel partner since 2009, specializing in international and domestic tours with personalized service and unbeatable prices.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919952211211" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tour Packages</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Destinations</h4>
+                    <ul>
+                        <li><a href="tours.html">Dubai Tours</a></li>
+                        <li><a href="tours.html">Phuket & Krabi</a></li>
+                        <li><a href="tours.html">Bali Tours</a></li>
+                        <li><a href="tours.html">Bangkok & Pattaya</a></li>
+                        <li><a href="tours.html">Singapore Tours</a></li>
+                        <li><a href="tours.html">Goa Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> #15, Srinagar, Hope College<br>Coimbatore, Tamil Nadu - 641 004</li>
+                        <li><i class="fas fa-phone"></i> +91-9952211211</li>
+                        <li><i class="fas fa-envelope"></i> hobbyindiatours@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:00 PM</li>
+                        <li><i class="fas fa-file-invoice"></i> GST: 33AIOPR7922E1Z1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RC Hobby India Group of Companies. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for travelers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
