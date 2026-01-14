@@ -953,26 +953,98 @@ button {
         display: none;
     }
 
+    .top-bar {
+        padding: 8px 0;
+        font-size: 12px;
+    }
+
+    .top-bar-content {
+        gap: 10px;
+    }
+
+    .contact-info {
+        gap: 12px;
+        font-size: 12px;
+    }
+
+    .contact-info span {
+        gap: 5px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+
     .mobile-menu-toggle {
         display: flex;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
     }
 
     .nav-menu {
         position: fixed;
-        top: 141px;
+        top: 0;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 141px);
+        height: 100vh;
         background: var(--white);
         flex-direction: column;
         align-items: flex-start;
-        padding: 30px;
-        transition: var(--transition);
+        padding: 120px 30px 120px;
+        gap: 0;
+        transition: left 0.3s ease;
         box-shadow: var(--shadow-lg);
+        z-index: 998;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-menu.active {
         left: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid var(--border-color);
+        flex-shrink: 0;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+        width: 100%;
+        padding: 18px 0;
+        font-size: 16px;
+    }
+
+    .nav-menu .btn-primary {
+        margin-top: 10px;
+        padding: 12px 20px;
+        text-align: center;
+        border-radius: 25px;
     }
 
     .hero-title {
@@ -1019,14 +1091,34 @@ button {
 }
 
 @media (max-width: 480px) {
+    .top-bar {
+        padding: 6px 0;
+        font-size: 11px;
+    }
+
     .top-bar-content {
-        flex-direction: column;
-        text-align: center;
+        justify-content: center;
     }
 
     .contact-info {
-        flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        font-size: 11px;
+    }
+
+    .contact-info span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .social-links a {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+    }
+
+    .logo img {
+        height: 45px;
     }
 
     .hero-title {

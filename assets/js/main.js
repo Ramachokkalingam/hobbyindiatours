@@ -8,30 +8,30 @@ function toggleMobileMenu() {
 }
 
 // ===== Hero Slider =====
-let currentSlide = 1;
+let slideIndex = 1;
 let slideInterval;
 
 function showSlide(n) {
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.dot');
     
-    if (n > slides.length) currentSlide = 1;
-    if (n < 1) currentSlide = slides.length;
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
     
     slides.forEach(slide => slide.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
     
-    slides[currentSlide - 1].classList.add('active');
-    dots[currentSlide - 1].classList.add('active');
+    slides[slideIndex - 1].classList.add('active');
+    dots[slideIndex - 1].classList.add('active');
 }
 
 function changeSlide(n) {
-    showSlide(currentSlide += n);
+    showSlide(slideIndex += n);
     resetSlideInterval();
 }
 
 function currentSlide(n) {
-    showSlide(currentSlide = n);
+    showSlide(slideIndex = n);
     resetSlideInterval();
 }
 
@@ -42,7 +42,7 @@ function resetSlideInterval() {
 
 function startSlideInterval() {
     slideInterval = setInterval(() => {
-        showSlide(currentSlide += 1);
+        showSlide(slideIndex += 1);
     }, 5000);
 }
 
